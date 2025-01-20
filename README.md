@@ -58,3 +58,7 @@ Place the "fhm_unpacker.py" script in the same location as the FHM files and run
 - Process can take a while, especially if the DMP file is larger size or there are too many FHM files to be processed.
 
 - Expect some system "freezes" while the scripts are running.
+
+---
+## FHM format specs
+[Available here](https://github.com/deaththed0g/AC6-FHM-utilities/wiki/FHM-file-format-specs)
