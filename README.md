@@ -1,4 +1,4 @@
-# Ace Combat 6: Fires of Liberation - FHM utilities
+# Ace Combat 6: Fires of Liberation - FHM tools
 
 ## About
 
