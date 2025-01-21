@@ -51,6 +51,8 @@ Place the "fhm_unpacker.py" script in the same location as the FHM files and run
 
 - File detection is nowhere perfect so don't expect a full and/or correct extraction.
 
+- Extracted files will be named in numerical order.
+
 - Some FHM files will not work with the unpacker script.
 
 - DMP files will contain multiple duplicate FHM files. Since the scanner scripts cannot distinguish between duplicate archives during the dumping process you will need to manually delete them after completion. If you are looking for a freeware application that detects and removes duplicate files I recommend [Anti-Twin](https://antitwin.org/en/).
