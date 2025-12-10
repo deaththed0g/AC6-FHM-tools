@@ -5,7 +5,7 @@
 Ace Combat 6's assets inside the ISO image are stored in PAC files that are compressed and encrypted. I have no knowledge of compression/encryption algorithms and impementation so the only way I could get access to the unmodified assets was to poke into Xenia's memory while it was running. Creating a memory dump of the emulator will also keep all the game assets that were loaded in the emulated X360 memory at the time of dumping so I created these script to extract some of them.
 
 Most decompressed/decrypted game assets in AC6 (such as 3D models, textures, etc.) seem to be stored in generic file containers with a "FHM" extension. 
-The game seems to have been developed using Namco's set of in-house tools ("NU" Library?) which was also used to develop other games released for the 360 such as Tekken 6 and Tekken Tag Tournament 2 given that some file formats found here can be also found in these games.
+The game seems to have been developed using Namco's set of in-house tools ("NU" Library?) which was also used to develop other games released for the 360 such as Tekken 6 and Tekken Tag Tournament 2 given that some file formats used here can be also found in those games.
 
 The "fhm_scanner" script will look for these FHM containers in given a DMP (memory dump) file. The "fhm_unpacker" script will extract the contents from any FHM container that was dumped using the "fhm_scanner" script.
 
