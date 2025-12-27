@@ -2,12 +2,11 @@
 
 ## About
 
-Ace Combat 6's assets inside the ISO image are stored in PAC files that are compressed and encrypted. I have no knowledge of compression/encryption algorithms and impementation so the only way I could get access to the unmodified assets was to poke into Xenia's memory while it was running. Creating a memory dump of the emulator will also keep all the game assets that were loaded in the emulated X360 memory at the time of dumping so I created these script to extract some of them.
+Ace Combat 6's assets inside the ISO image are stored in PAC files that are compressed and encrypted. I have no knowledge of compression/encryption algorithms and impementation, so the only way I could get access to the unmodified assets was to poke into Xenia's memory while it was emulating the game. Creating a memory dump of the emulator will also keep all the game assets that were loaded in the emulated X360 memory at that moment, so I created these scripts to extract them.
 
-Most decompressed/decrypted game assets in AC6 (such as 3D models, textures, etc.) seem to be stored in generic file containers with a "FHM" extension. 
-The game seems to have been developed using Namco's set of in-house tools ("NU" Library?) which was also used to develop other games released for the 360 such as Tekken 6 and Tekken Tag Tournament 2 given that some file formats used here can be also found in those games.
+Most decompressed/decrypted game assets in AC6 (such as 3D models, textures, etc.) seem to be stored in generic file containers whose header contains the "FHM" magic word. The game seems to have been developed using Namco's in-house tools ("NU Library"?) because some file formats used here can also be found in other games such as Tekken 6, Tekken Tag Tournament 2 and other Namco-developed games.
 
-The "fhm_scanner" script will look for these FHM containers in given a DMP (memory dump) file. The "fhm_unpacker" script will extract the contents from any FHM container that was dumped using the "fhm_scanner" script.
+The "fhm_scanner" script will look for these FHM containers in a DMP (memory dump) file. The "fhm_unpacker" script will extract the contents from any FHM container that was dumped using the "fhm_scanner" script.
 
 ## Required tools and files
 
@@ -21,10 +20,14 @@ The "fhm_scanner" script will look for these FHM containers in given a DMP (memo
 
 Start Xenia with Ace Combat 6 and select a mission and an aircraft. Once in the mission, pause the game then run Task Manager and create a dump file.
 
+Depending on the processing power of your computer, it could take some time for the dump file to be created. Once the dumping process is complete, you will find the file in the following path:
+
+>C:\Users\<YourUsername>\AppData\Local\Temp
+
 #### Extracting FHM files
 
 Place the DMP file and Python scripts in the same directory. Run the "fhm_scanner.py" (or "fhm_scanner_alt.py", see **NOTES** section) script and wait while it scans the file. It will create a folder using the name of the DMP file and dump any FHM file found there. 
-Once the process is complete the script will create a log detailing the position of the files detected within the DMP file as well other information.
+Once the process is complete the script will create a log text detailing the position of the files detected within the DMP file.
 
 #### Extracting the contents from FHM files
 
