@@ -4,7 +4,7 @@
 
 Ace Combat 6's assets inside the ISO image are stored in PAC files that are compressed and encrypted. I have no knowledge of compression/encryption algorithms, much less how to implement them, so the only way I could get access to the unmodified assets was to poke into Xenia's memory while it was emulating the game. Creating a memory dump of the emulator will also keep all the game assets that were loaded in the emulated X360 memory at that moment, so I created these scripts to extract them.
 
-Most decompressed/decrypted assets (such as 3D models, textures, etc.) seem to be stored in generic file containers whose header contains the "FHM" magic word. The game seems to have been developed using Namco's in-house tools ("NU Library"?) because some file formats used here can also be found in other games Namco-developed games (such as Tekken 6, Tekken Tag Tournament 2).
+Most decompressed/decrypted assets (such as 3D models, textures, etc.) seem to be stored in generic file containers whose header contains the "FHM" magic word. The game seems to have been developed using Namco's in-house tools ("NU Library"?) because some file formats used here can also be found in other games Namco-developed games (such as Tekken 6 and Tekken Tag Tournament 2, for example).
 
 The "fhm_scanner" script will look for these FHM containers in a DMP (memory dump) file. The "fhm_unpacker" script will extract the contents from any FHM container that was dumped using the "fhm_scanner" script.
 
@@ -20,7 +20,7 @@ The "fhm_scanner" script will look for these FHM containers in a DMP (memory dum
 
 Start Xenia with Ace Combat 6 and select a mission and an aircraft. Once in the mission, pause the game then run Task Manager and create a dump file.
 
-Depending on the processing power of your computer, it could take some time for the dump file to be created. Once the dumping process is complete, you will find the file in the following path:
+Depending on the processing power of your computer, it could take some time for the dump file to be created. Once the dumping process is complete, you will find the file (**xenia_canary.dmp**) in the following path:
 
 >C:\Users\<YourUsername>\AppData\Local\Temp
 
